@@ -1,16 +1,54 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerador de Senhas</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  Hello world
+  <div class="container">
+    <h1><span class="icon">🔐</span>Gerador de Senhas</h1>
+    <p class="subtitle">Gere instantaneamente uma senha aleatória e segura</p>
+
+    <div class="output">
+      <label for="password">Senha gerada</label>
+      <input type="text" id="password" readonly />
+    </div>
+
+    <div class="config-box">
+      <h2>Personalize sua senha</h2>
+
+      <div class="range-box">
+        <label>Quantidade de caracteres</label>
+        <div class="buttons">
+          <button onclick="changeLength(-1)">-</button>
+          <span id="length">12</span>
+          <button onclick="changeLength(1)">+</button>
+        </div>
+      </div>
+
+      <div class="options">
+        <label><input type="checkbox" id="uppercase" checked /> Incluir letras maiúsculas</label>
+        <label><input type="checkbox" id="lowercase" checked /> Incluir letras minúsculas</label>
+        <label><input type="checkbox" id="numbers" /> Incluir números</label>
+        <label><input type="checkbox" id="symbols" /> Incluir símbolos</label>
+      </div>
+
+      <div class="strength">
+        <label>Nível de segurança</label>
+        <div class="bar">
+          <div id="strength-bar"></div>
+        </div>
+        <div class="labels">
+          <span>Fraca</span>
+          <span>Média</span>
+          <span>Forte</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
-
 </html>
